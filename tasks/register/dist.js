@@ -1,5 +1,5 @@
 module.exports = function(grunt)
 {
-  
-  grunt.registerTask('build', ['jshint', 'karma:dist', 'browserify', 'uglify']);
+
+  grunt.registerTask('dist', ['jshint', 'karma:dist', 'browserify', 'uglify']);
 }
