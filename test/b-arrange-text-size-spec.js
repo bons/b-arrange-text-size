@@ -14,7 +14,7 @@ describe('Test Suite: bArrangeTextSize', function()
     return window.getComputedStyle(elm, null).getPropertyValue(attr);
   }
 
-  beforeEach(angular.mock.module('bArrangeTextSize'));
+  beforeEach(angular.mock.module('bons.bArrangeTextSize'));
 
   beforeEach(angular.mock.inject(['$rootScope','$compile',
       function ($rootScope, _$compile_)
@@ -30,8 +30,8 @@ describe('Test Suite: bArrangeTextSize', function()
     expect(app).toBeDefined();
   });
 
-  it("should arrange the text size between 12px and 16px", function() {
-
+  it("should arrange the text size between 12px and 16px", function()
+  {
     var body  = document.querySelector("body");
     body.innerHTML = '<div b-arrange-text-size style="font-size: 20px; width: 435px; height: 100px; margin-top: 0px; padding-top: 20px; padding-bottom: 20px;"><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>';
     $compile(body)(scope);
@@ -42,8 +42,8 @@ describe('Test Suite: bArrangeTextSize', function()
     expect(fontSize).toBeLessThan(16);
   });
 
-  it("should be equal to the minFontSize", function() {
-
+  it("should be equal to the minFontSize", function()
+  {
     var body  = document.querySelector("body");
     body.innerHTML = '<div b-arrange-text-size data-font-min="17" style="font-size: 10px; width: 100px; height: 100px; margin-top: 0px; padding-top: 20px; padding-bottom: 20px;"><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>';
     $compile(body)(scope);
@@ -56,8 +56,8 @@ describe('Test Suite: bArrangeTextSize', function()
 
   });
 
-  it("should be equal to the maxFontSize", function() {
-
+  it("should be equal to the maxFontSize", function()
+  {
     var body  = document.querySelector("body");
     body.innerHTML = '<div b-arrange-text-size data-font-max="27" style="font-size: 40px; width: 1000px; height: 1000px; margin-top: 0px; padding-top: 20px; padding-bottom: 20px;"><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>';
     $compile(body)(scope);
