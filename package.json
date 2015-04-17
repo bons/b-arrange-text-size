@@ -1,5 +1,5 @@
 {
-  "name": "bArrangeTextSize",
+  "name": "b-arrange-text-size",
   "description": "An Angular directive to arrange the text size of an element",
   "version": "0.1.0",
   "homepage": "https://github.com/bons/b-arrange-text-size",
