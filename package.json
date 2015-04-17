@@ -8,6 +8,7 @@
     "email": "dev@bons.me",
     "url": "http://bons.me"
   },
+  "main": "dist/bArrangeTextSize.min.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/bons/b-arrange-text-size.git"
